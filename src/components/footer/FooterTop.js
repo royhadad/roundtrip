@@ -11,12 +11,12 @@ export default () => {
             </h1>
             <div className='footer-link-sections'>
                 {
-                    linkSections.map((linkSection) => (
-                        <div className='footer-link-section'>
+                    linkSections.map((linkSection, index1) => (
+                        <div className='footer-link-section' key={index1}>
                             <h3>{linkSection.header}</h3>
                             {
-                                linkSection.links.map((linkObject) => (
-                                    <a href={linkObject.href} className='footer-link'>
+                                linkSection.links.map((linkObject, index2) => (
+                                    <a href={linkObject.href} className='footer-link' key={index2}>
                                         {linkObject.text}
                                     </a>
                                 ))
