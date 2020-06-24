@@ -3,7 +3,8 @@
     background: $off-white;
     padding: 0 2rem;
     @extend .flex-center;
-    //can change background color with background image
+
+    //TODO change background color with background image
     // background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSnyWFy0e8XBFYjmx2YMZjCSsub_lgzGfbMgg&usqp=CAU');
     // background-repeat: no-repeat;
     // background-size: cover;
@@ -45,8 +46,12 @@
                 color: $off-white;
                 padding: 1rem;
                 @extend .flex-center;
+                @extend .clickable;
                 border: none;
                 font-size: 1.5rem;
+            }
+            .signup-button:hover{
+                background: darken($red, 10);
             }
         }
 
