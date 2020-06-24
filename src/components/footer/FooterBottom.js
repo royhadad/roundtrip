@@ -26,7 +26,7 @@ export default () => {
                                 ((<IconComponent />).type === BsArrowUpType) ?
                                     (
                                         <IconContext.Provider
-                                            value={{ size: '50px', className: `social-media-link goto-top` }}
+                                            value={{ className: `social-media-link goto-top` }}
                                             key={index}
                                         >
                                             <div onClick={() => (window.scrollTo({ top: 0, left: 0, behavior: 'smooth' }))}>
@@ -37,7 +37,7 @@ export default () => {
                                     :
                                     (
                                         <IconContext.Provider
-                                            value={{ size: '50px', className: `social-media-link${((<IconComponent />).type === BsArrowUpType) ? ' goto-top' : ''}` }}
+                                            value={{ className: `social-media-link${((<IconComponent />).type === BsArrowUpType) ? ' goto-top' : ''}` }}
                                             key={index}
                                         >
                                             <a href={href}>

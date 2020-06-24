@@ -1,7 +1,7 @@
 .footer-bottom{
     background: $footer-bottom-background;
     min-height: 100px;
-    padding: 1rem 5rem;
+    padding: 1rem 5%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -9,6 +9,7 @@
 
     .copyright-text{
         color: $very-light-gray;
+        max-width: 25%;
     }
     
     .social-media-container{
@@ -16,8 +17,6 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        
-
 
         .social-media-link{
             @extend .clickable;
@@ -25,6 +24,10 @@
             background: $off-white;
             padding: 10%;
             margin: 10px;
+            width: 9vw;
+            height: 9vw;
+            max-width: 50px;
+            max-height: 50px;
 
             a{
                 display: block;
