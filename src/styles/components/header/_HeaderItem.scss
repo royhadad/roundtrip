@@ -1,0 +1,23 @@
+.header-item{
+    @extend .clickable;
+    @extend .flex-center;
+    color: $off-white;
+    margin: 0 0.5rem;
+    padding: 0.3rem 1rem;
+    border-radius: 0.2rem;
+    flex-grow: 1;
+    transition: background-color 0.2s ease-in;
+}
+
+.header-item:hover{
+    background: $off-white;
+    color: $dark-blue;
+}
+
+.header-item-small{
+
+}
+
+.header-item-big{
+    
+}
