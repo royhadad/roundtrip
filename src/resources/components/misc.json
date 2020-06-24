@@ -1,8 +1,11 @@
 {
     "JoinUs": {
         "header": "הצטרפו למועדון הלקוחות שלנו",
-        "name-placeholder": "שם מלא",
-        "email-placeholder": "דואר אלקטרוני",
-        "signup-button-text": "הרשם"
+        "namePlaceholder": "🖉 שם מלא",
+        "emailPlaceholder": "✉ דואר אלקטרוני",
+        "signupButtonText": "הרשם",
+        "emailError": "אנא הזן מייל תקני",
+        "nameError": "אנא הזן שם",
+        "successText": "צורפת למועדון הלקוחות של Alray!"
     }
 }
