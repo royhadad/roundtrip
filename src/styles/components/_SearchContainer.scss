@@ -1,0 +1,15 @@
+.search-container{
+    padding: 2rem 3%;
+    min-height: 900px;//TODO DELETE
+    background: $very-light-gray;
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+@media only screen and (min-width: $desktop-breakpoint){
+    .search-container{
+        flex-direction: column;
+    }
+}

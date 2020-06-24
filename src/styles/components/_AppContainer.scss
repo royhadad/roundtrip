@@ -1,0 +1,9 @@
+.app-container__wrapper{
+    @extend .flex-center;
+    flex-direction: column;
+
+    .app-container{
+        width: 100%;
+        max-width: 1000px;
+    }
+}

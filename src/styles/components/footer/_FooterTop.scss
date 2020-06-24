@@ -1,0 +1,35 @@
+.footer-top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background: $footer-background;
+    padding: 5rem;
+    >h1{
+        color: $off-white;
+        font-size: 5vw;
+        margin-top: 0;
+    }
+
+    .footer-link-sections{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-evenly;
+
+        .footer-link-section{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h3{
+                color: $off-white;
+            }
+
+            .footer-link{
+                color: $very-light-gray;
+                margin: 1rem 3rem;
+            }
+        }
+    }
+}

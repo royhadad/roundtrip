@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+  color: $text-color;
+  direction: rtl;
+}
+
+html{
+  margin:0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Rubik',sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clickable{
+  @extend .unselectable-text;
+  cursor: pointer;
+}
+
+.unselectable-text{
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;          /* Likely future */ 
+  -webkit-user-drag: none;
+}
+
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: default;
+}
+
+a{
+  @extend .clickable;
+  text-decoration: none;
+}
