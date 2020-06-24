@@ -1,18 +1,15 @@
 import React from 'react';
+import Filter from './filter/Filter';
+import Sort from './sort/Sort';
+import List from './List';
 
 export default () => {
     return (
         <div className='search-container'>
-            <div className='filter-container'>
-
-            </div>
-            <div className='sort-and-results-container'>
-                <div className='sort-container'>
-
-                </div>
-                <div className='results-container'>
-
-                </div>
+            <Filter />
+            <div className='sort-and-list-container'>
+                <Sort />
+                <List />
             </div>
         </div>
     );
