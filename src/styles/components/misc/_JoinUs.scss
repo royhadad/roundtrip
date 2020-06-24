@@ -12,7 +12,7 @@
     .join-us-inner-container{
         width: 100%;
         max-width: $max-main-area-width;
-        padding: 7rem 0;
+        padding: 4rem 0 2rem 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -25,12 +25,19 @@
         }
         .form-container{
             display: flex;
-            flex-direction: row;
             align-items: flex-start;
+            flex-direction: row;
             justify-content: space-between;
             width: 100%;
+
+            @media only screen and (max-width: $desktop-breakpoint){
+                flex-direction: column;
+            }
+
             >*{
-                width: 31%;
+                width: 100%;
+                flex-grow: 1;
+                margin: 0.5rem 1%;
                 height: 3rem;
                 border-radius: 0.2rem;
             }
@@ -59,5 +66,11 @@
             color: $red;
             margin-top: 2rem;
         }
+    }
+}
+
+@media only screen and (max-width: $desktop-breakpoint){
+    .form-container{
+        flex-direction: column !important;
     }
 }
