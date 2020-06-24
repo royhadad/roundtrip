@@ -1,3 +1,8 @@
 {
-    "JoinUs": {}
+    "JoinUs": {
+        "header": "הצטרפו למועדון הלקוחות שלנו",
+        "name-placeholder": "שם מלא",
+        "email-placeholder": "דואר אלקטרוני",
+        "signup-button-text": "הרשם"
+    }
 }
