@@ -7,11 +7,13 @@ $very-light-gray: #DDDDDD;
 $off-white: #EEEEEE;
 $dark-blue: #313685;
 $light-blue: #0091E2;
+$very-light-blue: #EEF2F5;
 $red: #FF0000;
 $star-gold: #FFA767;
 
 //Sizes
-$desktop-breakpoint: 800px;
+$desktop-breakpoint: 800px; //use for max-width
+$desktop-breakpoint-plus: 801px; //use for min-width
 $max-main-area-width: 1000px;
 
 //other

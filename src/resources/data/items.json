@@ -1,0 +1,29 @@
+{
+    "allItems": [
+        {
+            "id": 1,
+            "hotel": "crown plaza",
+            "price": 8000
+        },
+        {
+            "id": 2,
+            "hotel": "crown plaza",
+            "price": 8000
+        },
+        {
+            "id": 3,
+            "hotel": "crown plaza",
+            "price": 8000
+        },
+        {
+            "id": 4,
+            "hotel": "crown plaza",
+            "price": 8000
+        },
+        {
+            "id": 5,
+            "hotel": "crown plaza",
+            "price": 8000
+        }
+    ]
+}

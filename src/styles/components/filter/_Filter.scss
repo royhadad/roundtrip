@@ -1,13 +1,6 @@
 .filter-container{
-    flex-grow: 4;
     background: $dark-blue;
     min-height: 300px;
-    margin: 0 0 0 1rem;
+    margin: 0 0 1rem 0;
     @extend .smooth-corners;
-}
-
-@media only screen and (max-width: $desktop-breakpoint){
-    .filter-container{
-        margin: 0 0 1rem 0;
-    }
 }

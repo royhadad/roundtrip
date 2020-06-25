@@ -1,4 +1,25 @@
 .list-container{
-    background: $very-light-gray;
-    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    .list-header{
+        color: $light-blue;
+        margin-bottom: 0;
+    }
+
+    @media only screen and (max-width: $desktop-breakpoint){
+        padding: 0 1rem;
+    }
+}
+
+.list-spinner-container{
+    @extend .list-container;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem 0;
+    .list-spinner{
+        color: $light-blue;
+    }
 }

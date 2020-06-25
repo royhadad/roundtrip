@@ -1,0 +1,28 @@
+.item-container{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1rem;
+
+    .item-region{
+        @extend .smooth-corners;
+    }
+    .item-right{
+        @extend .item-region;
+        width: 18%;
+        background: yellow;
+    }
+    .item-middle{
+        @extend .item-region;
+        border: $regular-border;
+        width: 61%;
+    }
+    .item-left{
+        @extend .item-region;
+        border: $regular-border;
+        width: 18%;
+        background: $very-light-blue;
+    }
+}
