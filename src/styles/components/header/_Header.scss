@@ -34,7 +34,7 @@
                 margin-left: 2rem;
             }
             a{
-                font-size: 4vw;
+                font-size: 3rem;
             }
         }
     }
@@ -56,7 +56,7 @@
     }
     @media only screen and (max-width: $desktop-breakpoint){
         .header-mobile-dropdown-open{
-            height:30vh;
+            height:10rem;
             opacity: 1;
             z-index: 5;
         }
@@ -64,7 +64,6 @@
 }
 
 .mobile-menu-button{
-    width: 80px;
     height: 100%;
     color: $off-white;
     @extend .flex-center;
@@ -73,9 +72,10 @@
     vertical-align: middle;
     >i{
         @extend .flex-center;
-        font-size: 12vw;
+        font-size: 3rem;
         height: 100px;
         color: $off-white;
+        padding: 0 1rem;
     }
     display: none;
 }
