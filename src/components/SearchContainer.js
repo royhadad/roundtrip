@@ -1,25 +1,35 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { connect } from 'react-redux';
+import { setItems } from '../actions/items';
+import itemsSelector from '../selectors/items';
 import Filter from './filter/Filter';
 import Sort from './sort/Sort';
 import List from './List';
-import getItems from '../selectors/items';
+import getAllItemsAsync from '../utils/getAllItemsAsync';
 
-export default () => {
-    const [items, setItems] = useState(undefined);
-    useEffect(() => {
-        const fetchData = async () => {
-            setItems(await getItems());
-        };
-        fetchData();
-    }, [])
+class SearchContainer extends React.Component {
+    componentDidMount = async () => {
+        const items = await getAllItemsAsync();
+        this.props.setItems(items);
+    }
 
-    return (
-        <div className='search-container'>
-            <Filter />
-            <div className='sort-and-list-container'>
-                <Sort />
-                <List items={items} />
+    render() {
+        return (
+            <div className='search-container'>
+                <Filter />
+                <div className='sort-and-list-container'>
+                    <Sort />
+                    <List items={this.props.items} />
+                </div>
             </div>
-        </div>
-    );
+        );
+    }
 }
+
+const mapStateToProps = (state) => ({
+    items: itemsSelector(state.items, state.filters)
+})
+const mapDispatchToProps = (dispatch) => ({
+    setItems: (items) => dispatch(setItems(items))
+})
+export default connect(mapStateToProps, mapDispatchToProps)(SearchContainer);

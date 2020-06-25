@@ -4,22 +4,23 @@ import { createBrowserHistory } from 'history';
 import AppContainer from './components/AppContainer';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
+import configureStore from './store/configureStore';
+import { Provider } from 'react-redux';
 
-//TODO
-// export const store = configureStore();
-// <Provider store={store}>
-// </Provider>
+const store = configureStore();
 
 let history = createBrowserHistory();
 
 const AppRouter = () => (
-    <Router history={history}>
-        <Header />
-        <Switch>
-            <Route path="/" component={AppContainer} />
-        </Switch>
-        <Footer />
-    </Router>
+    <Provider store={store}>
+        <Router history={history}>
+            <Header />
+            <Switch>
+                <Route path="/" component={AppContainer} />
+            </Switch>
+            <Footer />
+        </Router>
+    </Provider>
 );
 
 export default AppRouter;

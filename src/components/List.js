@@ -6,7 +6,7 @@ import resources from '../resources/components/list.json';
 class List extends React.Component {
 
     render() {
-        if (this.props.items === undefined) {
+        if (this.props.items === null) {
             return (
                 <div className='list-spinner-container'>
                     <DotLoader

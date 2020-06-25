@@ -14,28 +14,28 @@ class Item {
         this.includesBreakfast = includesBreakfast
     }
 
-    getTimeText(time) {
+    static getTimeText(time) {
         return time.format("MM/DD | hh:mm");
     }
     getFromTimeText() {
-        return this.getTimeText(this.fromTime);
+        return Item.getTimeText(this.fromTime);
     }
     getToTimeText() {
-        return this.getTimeText(this.toTime);
+        return Item.getTimeText(this.toTime);
     }
     getNumberOfNights() {
         return this.toTime.diff(this.fromTime, 'days');
     }
-    getTextFromNumber(number) {
+    static getTextFromNumber(number) {
         //returns the hebrew word in male form of the number, up to 9, above 9 returns the number
         return numbersInHebrew[number] || number;
     }
     getNumberOfNightsText() {
         const numberOfNights = this.getNumberOfNights();
         if (numberOfNights === 1) {
-            return `${itemResources.singleNight} ${this.getTextFromNumber(numberOfNights)}`
+            return `${itemResources.singleNight} ${Item.getTextFromNumber(numberOfNights)}`
         } else {
-            return `${this.getTextFromNumber(numberOfNights)} ${itemResources.manyNights}`
+            return `${Item.getTextFromNumber(numberOfNights)} ${itemResources.manyNights}`
         }
     }
     getAttributesText() {

@@ -1,4 +1,60 @@
 .sort-container{
-    background: $light-gray;
-    min-height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+
+    flex-direction: row;
+    .sort-buttons-container{
+        width: 60%;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .sort-button{
+            width: 25%;
+            padding: 0.4rem;
+            background: white;
+            color: $light-gray;
+            transition: background-color 0.2s ease-in;
+        }
+
+        .sort-button-selected,
+        .sort-button:hover{
+            background: $dark-blue;
+            color: $off-white;
+        }
+    }
+    .sort-dropdown-container{
+        width: 30%;
+
+        select{
+            width: 100%;
+        }
+    }
+    .sort-vertical-line{
+        color: $very-light-gray;
+        font-size: 1.5rem;
+    }
+
+    @media only screen and (max-width: $desktop-breakpoint){
+        flex-direction: column;
+        margin-bottom: 1rem;
+        padding: 0 1rem;
+        .sort-buttons-container{
+            width: 100%;
+            margin-bottom: 1rem;
+            .sort-button{
+                width: 32%;
+            }
+        }
+        .sort-dropdown-container{
+            width: 100%;
+        }
+        .sort-vertical-line{
+            display: none;
+        }
+    }
 }

@@ -5,11 +5,11 @@ import moment from 'moment';
 export default async () => {
     const allItems = [1, 2, 3, 4, 5].map((rating) => (new Item(
         'Awesome Plaza Hotel',
-        8000,
+        2000 * rating,
         rating,
         'https://i.pinimg.com/236x/a8/61/d0/a861d089be59851c9e1db743b10621a8.jpg',
         new moment(),
-        new moment().add(1, 'days'),
+        new moment().add(rating, 'days'),
         true
     )))
 
