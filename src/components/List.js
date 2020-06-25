@@ -6,8 +6,6 @@ import resources from '../resources/components/list.json';
 class List extends React.Component {
 
     render() {
-        console.log(this.props.items);
-
         if (this.props.items === undefined) {
             return (
                 <div className='list-spinner-container'>

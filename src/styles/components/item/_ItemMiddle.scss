@@ -1,0 +1,50 @@
+.item-middle{
+    padding: 2% 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    
+
+    .item-middle-data{
+        width: 56%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        .item-header{
+            color: $light-blue;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        .item-time{
+            font-size: 0.8rem;
+            .item-time-text{
+                font-weight: 700;
+                color: $almost-black;
+            }
+            .item-time-value{
+                color: $light-gray;
+            }
+        }
+        .item-description{
+            font-weight: 700;
+            color: $almost-black;
+        }
+    }
+    .item-middle-show-more-button{
+        @extend .flex-center;
+        width: 42%;
+        padding: 3% 1%;
+        color: $off-white;
+        background: $light-blue;
+        font-weight: 700;
+
+        font-size: 0.7rem;
+        @media only screen and (max-width: $desktop-breakpoint){
+            font-size: 0.3rem;
+        }
+    }
+}

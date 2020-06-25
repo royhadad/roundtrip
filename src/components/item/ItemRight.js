@@ -1,9 +1,11 @@
 import React from 'react';
+import Img from '../generics/Img';
 
-export default () => {
+export default ({ item }) => {
     return (
         <div className='item-right'>
-            im right
+            <Img src={item.imgUrl} alt={item.hotel}>
+            </Img>
         </div>
     );
 }

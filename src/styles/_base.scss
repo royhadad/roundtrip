@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  color: $text-color;
   direction: rtl;
 }
 
@@ -18,11 +17,6 @@ body {
 
 #root{
   width: 100%;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
 
 .flex-center{
@@ -58,4 +52,10 @@ a{
 
 .smooth-corners{
   border-radius: 0.2rem;
+}
+
+.btn{
+  @extend .smooth-corners;
+  @extend .clickable;
+  border: none;
 }

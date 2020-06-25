@@ -21,6 +21,7 @@
         .social-media-link{
             @extend .clickable;
             border-radius: 50%;
+            color: $almost-black;
             background: $off-white;
             padding: 10%;
             margin: 10px;
