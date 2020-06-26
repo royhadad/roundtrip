@@ -1,10 +1,10 @@
 import moment from 'moment';
-import SortObject from '../entities/Sort';
+import SortObject from '../entities/SortObject';
 // Filters Reducer
 
 const filtersReducerDefaultState = {
     text: '',
-    sort: new SortObject('price', false),
+    sortObject: new SortObject('price', false),
     startDate: moment().startOf('month'),
     endDate: moment().endOf('month')
 };
@@ -19,7 +19,7 @@ export default (state = filtersReducerDefaultState, action) => {
         case 'SET_SORT':
             return {
                 ...state,
-                sort: action.sort
+                sortObject: action.sortObject
             };
         case 'SET_START_DATE':
             return {

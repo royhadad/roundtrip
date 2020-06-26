@@ -44,6 +44,9 @@ class Item {
     getDescription() {
         return `${this.getNumberOfNightsText()} | ${this.getAttributesText()}`;
     }
+    getDealValue() {
+        return (this.getNumberOfNights() / (this.avgPrice / 1000)) * this.rating;
+    }
 }
 
 export default Item;

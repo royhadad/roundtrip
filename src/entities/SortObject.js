@@ -1,4 +1,4 @@
-export default class Sort {
+export default class SortObject {
     constructor(type, isDescending) {
         this.type = type;
         this.isDescending = isDescending;

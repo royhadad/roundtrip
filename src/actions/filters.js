@@ -4,9 +4,9 @@ export const setTextFilter = (text = '') => ({
     text
 });
 
-export const setSort = (sort) => ({
+export const setSort = (sortObject) => ({
     type: 'SET_SORT',
-    sort
+    sortObject
 })
 
 // SET_START_DATE
