@@ -1,4 +1,6 @@
 import React from 'react';
+import { Select, MenuItem, InputLabel } from '@material-ui/core';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import resources from '../../resources/components/sort.json';
 
 export default ({ sortOptions, selectedSortObject, setSortObject }) => {
@@ -7,20 +9,36 @@ export default ({ sortOptions, selectedSortObject, setSortObject }) => {
     }, -1);
 
     return (
-        <div>
-            <select onChange={(e) => setSortObject(sortOptions[e.target.value].sortObject)} value={selectedSortObjectIndex}>
+        <div className='sort-dropdown-container'>
+            <InputLabel className='sort-dropdown-label'>{resources.sortBy}</InputLabel>
+            <Select
+                onChange={(e) => setSortObject(sortOptions[e.target.value].sortObject)}
+                value={selectedSortObjectIndex}
+                className='sort-dropdown'
+                IconComponent={ExpandMoreIcon}
+                MenuProps={{
+                    anchorOrigin: {
+                        vertical: "bottom",
+                        horizontal: "right"
+                    },
+                    transformOrigin: {
+                        vertical: "top",
+                        horizontal: "right"
+                    },
+                    getContentAnchorEl: null
+                }}
+            >
                 {
                     sortOptions.map((sortOption, index) => (
-                        <option
+                        <MenuItem
                             value={index}
                             key={index}
                         >
-                            {resources.sortBy}
-                            {sortOption.text}
-                        </option>
+                            <span>{sortOption.text}</span>
+                        </MenuItem>
                     ))
                 }
-            </select>
+            </Select>
         </div>
     )
 }

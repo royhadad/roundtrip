@@ -6,9 +6,7 @@ import AppRouter from './AppRouter';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <AppRouter />
-  </React.StrictMode>,
+  <AppRouter />,
   document.getElementById('root')
 );
 

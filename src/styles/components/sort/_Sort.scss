@@ -10,29 +10,8 @@
 
         display: flex;
         flex-direction: row;
-        align-items: center;
+        align-items: stretch;
         justify-content: space-between;
-
-        .sort-button{
-            width: 25%;
-            padding: 0.4rem;
-            background: white;
-            color: $light-gray;
-            transition: background-color 0.2s ease-in;
-        }
-
-        .sort-button-selected,
-        .sort-button:hover{
-            background: $dark-blue;
-            color: $off-white;
-        }
-    }
-    .sort-dropdown-container{
-        width: 30%;
-
-        select{
-            width: 100%;
-        }
     }
     .sort-vertical-line{
         color: $very-light-gray;
@@ -46,12 +25,6 @@
         .sort-buttons-container{
             width: 100%;
             margin-bottom: 1rem;
-            .sort-button{
-                width: 32%;
-            }
-        }
-        .sort-dropdown-container{
-            width: 100%;
         }
         .sort-vertical-line{
             display: none;

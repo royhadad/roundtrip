@@ -1,0 +1,21 @@
+.sort-button{
+    width: 30%;
+    padding: 0.4rem;
+    background: white;
+    color: $light-gray;
+    transition: background-color 0.2s ease-in;
+    @extend .flex-center;
+
+    >span{
+        @extend .flex-center;
+    }
+    .sort-button{
+        width: 32%;
+        font-size: 85%;
+    }
+}
+.sort-button-selected,
+.sort-button:hover{
+    background: $dark-blue;
+    color: $off-white;
+}

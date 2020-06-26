@@ -5,6 +5,8 @@ import SortObject from '../../entities/Sort';
 import SortButton from './SortButton';
 import SortDropDown from './SortDropDown';
 import resources from '../../resources/components/sort.json';
+import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
+import AccountBalanceWalletIcon from '@material-ui/icons/AccountBalanceWallet';
 
 class Sort extends React.Component {
     render() {
@@ -32,31 +34,29 @@ class Sort extends React.Component {
                 <div className='sort-buttons-container'>
                     <SortButton
                         sortObject={cheapestSortObject}
-                        text={resources.cheapest}
+                        text={<span><AttachMoneyIcon className='sort-button-icon' />&nbsp;{resources.cheapest}&nbsp;&nbsp;</span>}
                         selectedSortObject={this.props.sort}
                         setSortObject={this.props.setSort}
                     />
                     <SortButton
                         sortObject={mostPopularSortObject}
-                        text={resources.mostPopular}
+                        text={<span><i className="fa fa-trophy" aria-hidden="true" />&nbsp;{resources.mostPopular}</span>}
                         selectedSortObject={this.props.sort}
                         setSortObject={this.props.setSort}
                     />
                     <SortButton
                         sortObject={bestDealSortObject}
-                        text={resources.bestDeal}
+                        text={<span><AccountBalanceWalletIcon className='sort-button-icon' />&nbsp;{resources.bestDeal}</span>}
                         selectedSortObject={this.props.sort}
                         setSortObject={this.props.setSort}
                     />
                 </div>
                 <span className='sort-vertical-line'>|</span>
-                <div className='sort-dropdown-container'>
-                    <SortDropDown
-                        sortOptions={sortOptions}
-                        selectedSortObject={this.props.sort}
-                        setSortObject={this.props.setSort}
-                    />
-                </div>
+                <SortDropDown
+                    sortOptions={sortOptions}
+                    selectedSortObject={this.props.sort}
+                    setSortObject={this.props.setSort}
+                />
             </div>
         );
     }

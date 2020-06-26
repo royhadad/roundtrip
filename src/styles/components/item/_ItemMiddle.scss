@@ -13,6 +13,9 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-between;
+        >*{
+            padding-bottom: 0.5rem;
+        }
 
         .item-header{
             color: $light-blue;
@@ -41,10 +44,22 @@
         color: $off-white;
         background: $light-blue;
         font-weight: 700;
-
         font-size: 0.75rem;
-        @media only screen and (max-width: $desktop-breakpoint){
-            font-size: 0.3rem;
+    }
+}
+
+@media only screen and (max-width: $desktop-breakpoint){
+    .item-middle{
+        flex-direction: column;
+        align-items: flex-start;
+
+        .item-middle-show-more-button,
+        .item-middle-data{
+            width: 100%;
+
+            .item-description{
+                font-size: 80%;
+            }
         }
     }
 }
