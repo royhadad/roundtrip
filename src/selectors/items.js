@@ -23,6 +23,31 @@ export default (allItems, filters) => {
     const sortDirectionFactor = sortObject.isDescending ? -1 : 1;
     return allItems
         .filter((item) => {
+            //price
+            if (item.avgPrice < filters.minPrice || item.avgPrice > filters.maxPrice) {
+                return false;
+            }
+
+            //rating
+            const itemRatingObject = filters.validRatings.find((ratingObject) => ratingObject.rating === item.rating);
+            if (!itemRatingObject || !itemRatingObject.isValid) {
+                return false;
+            }
+
+            //includesBreakfast
+            if (!filters.showIncludesBreakfast && item.includesBreakfast) {
+                return false;
+            }
+            if (!filters.showSleepOnly && !item.includesBreakfast) {
+                return false;
+            }
+
+            //text
+            if (!item.hotel.toLowerCase().includes(filters.text.toLowerCase())) {
+                return false;
+            }
+
+            //if didn't fail any test, returns true
             return true;
         })
         .sort((item1, item2) => {

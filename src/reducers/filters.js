@@ -3,7 +3,7 @@ import RatingObject from '../entities/RatingObject';
 
 const filtersReducerDefaultState = {
     sortObject: new SortObject('price', false),
-    validRatings: [1, 2, 3, 4, 5].map((rating) => (new RatingObject(rating, rating === 5 ? true : false))),
+    validRatings: [1, 2, 3, 4, 5].map((rating) => (new RatingObject(rating, true))),
     minPrice: 0,
     maxPrice: 0,
     showIncludesBreakfast: true,
