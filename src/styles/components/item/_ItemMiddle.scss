@@ -16,7 +16,6 @@
         >*{
             padding-bottom: 0.5rem;
         }
-
         .item-header{
             color: $light-blue;
             font-size: 1rem;
@@ -41,7 +40,7 @@
         @extend .flex-center;
         width: 42%;
         padding: 3% 1%;
-        color: $off-white;
+        color:white;
         background: $light-blue;
         font-weight: 700;
         font-size: 0.75rem;

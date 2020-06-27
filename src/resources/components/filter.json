@@ -1,0 +1,12 @@
+{
+    "filterHeader": "סינון תוצאות",
+    "ratingFilterHeader": "דירוג מלון",
+    "priceRangeFilterHeader": "טווח מחיר לאדם",
+    "includesBreakfastFilterHeader": "בסיס אירוח",
+    "ratingsFilterPrice": 819,
+    "sleepOnlyText": "לינה",
+    "sleepOnlyPrice": 819,
+    "includesBreakfastText": "ארוחת בוקר",
+    "includesBreakfastPrice": 819,
+    "textFilterPlaceholder": "חיפוש לפי שם מלון"
+}

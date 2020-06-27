@@ -1,5 +1,6 @@
 import React from 'react';
 import itemResources from '../../resources/components/item.json';
+import formatPrice from '../../utils/formatPrice';
 const resources = itemResources.itemLeft;
 
 export default ({ item }) => {
@@ -7,7 +8,7 @@ export default ({ item }) => {
         <div className='item-left'>
             <div className='item-left-price-and-text-container'>
                 <span className='item-left-price'>
-                    {new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 0 }).format(item.avgPrice)}
+                    {formatPrice(item.avgPrice)}
                 </span>
                 <span className='item-left-text'>
                     {resources.text}

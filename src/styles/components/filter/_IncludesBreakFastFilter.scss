@@ -1,0 +1,22 @@
+.includes-breakfast-filter-container{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    .includes-breakfast-filter-item{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        color: white;
+        @extend .clickable;
+
+        .includes-breakfast-filter-item-text{
+            margin-right: 1rem;
+        }
+        .includes-breakfast-filter-item-price{
+            margin-right: auto;
+            letter-spacing: 0.05rem;
+        }
+    }
+}

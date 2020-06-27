@@ -25,7 +25,7 @@ export default ({ sortOptions, selectedSortObject, setSortObject }) => {
                         vertical: "top",
                         horizontal: "right"
                     },
-                    getContentAnchorEl: null
+                    getContentAnchorEl: null,
                 }}
             >
                 {

@@ -1,0 +1,28 @@
+.rating-filter-container{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    padding-bottom: 1rem;
+
+    .rating-filter-header{
+        color:white;
+        padding: 1rem;
+    }
+
+    .ratings-filter-ratings{
+        .ratings-filter-rating{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            @extend .clickable;
+
+            .ratings-filter-price{  
+                font-size: 0.8rem;
+                letter-spacing: 0.05rem;
+                color:white;
+            }
+        }
+    }
+}

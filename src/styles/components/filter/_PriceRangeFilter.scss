@@ -1,0 +1,13 @@
+.price-range-container-container{
+    .absolute-price-wrapper{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+        >.absolute-min-price,
+        >.absolute-max-price{
+            color: white;
+            letter-spacing: 0.05rem; 
+        }
+    }
+}

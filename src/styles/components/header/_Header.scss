@@ -65,7 +65,7 @@
 
 .mobile-menu-button{
     height: 100%;
-    color: $off-white;
+    color:white;
     @extend .flex-center;
     @extend .clickable;
     text-align: center;
@@ -74,7 +74,7 @@
         @extend .flex-center;
         font-size: 3rem;
         height: 100px;
-        color: $off-white;
+        color:white;
         padding: 0 1rem;
     }
     display: none;

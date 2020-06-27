@@ -1,6 +1,31 @@
 .filter-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
     background: $dark-blue;
-    min-height: 300px;
     margin: 0 0 1rem 0;
     @extend .smooth-corners;
+
+    .filter-header.filter-header-main{
+        padding: 1rem 1rem;
+        border-bottom: 1px solid $off-white;
+    }
+    .filter-header{
+        color:white;
+        padding: 1rem 0;
+        width: 100%;
+    }
+    .filters-container-inner{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        padding: 0 1rem;
+
+        >hr{
+            width: 100%;
+            border-top: none;
+        }
+    }
 }
