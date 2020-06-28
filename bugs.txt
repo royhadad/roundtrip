@@ -1,11 +1,5 @@
 #1
 fix router, Links and header highlight
 
-#2
-fix facebook icon
-
-#3
-add 2 background images
-
 #5
 fix dropdown icons not proper
