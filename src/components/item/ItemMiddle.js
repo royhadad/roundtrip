@@ -25,7 +25,7 @@ const ItemMiddle = ({ item, classes }) => {
                     {item.getDescription()}
                 </div>
             </div>
-            <div className='item-middle-show-more-button btn'>
+            <div className='item-middle-show-more-button btn' onClick={() => alert('הכפתור יציג חבילות נוספות')}>
                 {resources.showMoreButton}
             </div>
         </div>

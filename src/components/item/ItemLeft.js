@@ -14,7 +14,7 @@ export default ({ item }) => {
                     {resources.text}
                 </span>
             </div>
-            <button className='item-left-button btn'>
+            <button className='item-left-button btn' onClick={() => alert('הכפתור יציג פרטים נוספים')} >
                 {resources.buttonText}
             </button>
         </div>

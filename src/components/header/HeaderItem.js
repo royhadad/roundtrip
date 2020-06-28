@@ -4,9 +4,9 @@ import React from 'react';
 class HeaderItem extends React.Component {
     render() {
         return (
-            <a href={this.props.data.href} className={'header-item' + (this.props.data.header === 'חבילות נופש' ? ' header-item-selected' : '')}>
+            <div onClick={() => alert(`הכפתור יעביר לדף ${this.props.data.header}`)} className={'header-item' + (this.props.data.header === 'חבילות נופש' ? ' header-item-selected' : '')}>
                 {this.props.data.header}
-            </a>
+            </div>
         );
     }
 }
