@@ -31,95 +31,59 @@ class Filter extends React.Component {
     }
     checkAndUpdateIsMobile = () => {
         const isMobile = window.matchMedia('(max-width: 800px)').matches;
-        if (isMobile !== this.state.isMobile) {
+        if (isMobile !== this.props.isMobile) {
             this.setState(() => ({ isMobile }));
         }
     }
 
+    renderInnerFilterContainerJSX = () => (
+        <div className='filters-container-inner'>
+            <RatingFilter
+                validRatings={this.props.validRatings}
+                toggleRating={this.props.toggleRating}
+            />
+            <hr />
+            <PriceRangeFilter
+                minPrice={this.props.minPrice}
+                maxPrice={this.props.maxPrice}
+                setMinPrice={this.props.setMinPrice}
+                setMaxPrice={this.props.setMaxPrice}
+                absoluteMin={absoluteMinPrice}
+                absoluteMax={absoluteMaxPrice}
+            />
+            <hr />
+            <IncludesBreakFastFilter
+                showSleepOnly={this.props.showSleepOnly}
+                toggleShowSleepOnly={this.props.toggleShowSleepOnly}
+                showIncludesBreakfast={this.props.showIncludesBreakfast}
+                toggleShowIncludesBreakfast={this.props.toggleShowIncludesBreakfast}
+            />
+            <hr />
+            <TextFilter text={this.props.text} setTextFilter={this.props.setTextFilter} />
+        </div>
+    )
+
     render() {
-        if (!this.state.isMobile) {
-            return (
-                <div className='filter-container'>
-                    <div className='filter-header filter-header-main'>
-                        {resources.filterHeader}
-                    </div>
-                    <FilterInner
-                        validRatings={this.props.validRatings}
-                        toggleRating={this.props.toggleRating}
-                        minPrice={this.props.minPrice}
-                        maxPrice={this.props.maxPrice}
-                        setMinPrice={this.props.setMinPrice}
-                        setMaxPrice={this.props.setMaxPrice}
-                        showSleepOnly={this.props.showSleepOnly}
-                        toggleShowSleepOnly={this.props.toggleShowSleepOnly}
-                        showIncludesBreakfast={this.props.showIncludesBreakfast}
-                        toggleShowIncludesBreakfast={this.props.toggleShowIncludesBreakfast}
-                        text={this.props.text}
-                        setTextFilter={this.props.setTextFilter}
-                    />
+        return (
+            <div className={'filter-container' + (this.props.isMobile ? '-mobile' : '')}>
+                <div className='filter-header filter-header-main' onClick={this.props.isMobile ? this.toggleCollapse : () => { }}>
+                    {resources.filterHeader}
+                    {this.props.isMobile && (this.state.isOpened ? (<ExpandLessIcon />) : (<ExpandMoreIcon />))}
                 </div>
-            )
-        } else {
-            return (
-                <div className='filter-container-mobile'>
-                    <div className='filter-header filter-header-main' onClick={this.toggleCollapse}>
-                        <span className='filter-header-text'>
-                            {resources.filterHeader}
-                        </span>
-                        {
-                            this.state.isOpened ? (<ExpandLessIcon />) : (<ExpandMoreIcon />)
-                        }
-                    </div>
+                {this.props.isMobile ? (
                     <Collapse isOpened={this.state.isOpened}>
-                        <FilterInner
-                            validRatings={this.props.validRatings}
-                            toggleRating={this.props.toggleRating}
-                            minPrice={this.props.minPrice}
-                            maxPrice={this.props.maxPrice}
-                            setMinPrice={this.props.setMinPrice}
-                            setMaxPrice={this.props.setMaxPrice}
-                            showSleepOnly={this.props.showSleepOnly}
-                            toggleShowSleepOnly={this.props.toggleShowSleepOnly}
-                            showIncludesBreakfast={this.props.showIncludesBreakfast}
-                            toggleShowIncludesBreakfast={this.props.toggleShowIncludesBreakfast}
-                            text={this.props.text}
-                            setTextFilter={this.props.setTextFilter}
-                        />
+                        {this.renderInnerFilterContainerJSX()}
                     </Collapse>
-                </div>
-            )
-        }
+                ) : (
+                        this.renderInnerFilterContainerJSX()
+                    )}
+            </div>
+        )
     }
 }
 
-const FilterInner = (props) => (
-    <div className='filters-container-inner'>
-        <RatingFilter
-            validRatings={props.validRatings}
-            toggleRating={props.toggleRating}
-        />
-        <hr />
-        <PriceRangeFilter
-            minPrice={props.minPrice}
-            maxPrice={props.maxPrice}
-            setMinPrice={props.setMinPrice}
-            setMaxPrice={props.setMaxPrice}
-            absoluteMin={absoluteMinPrice}
-            absoluteMax={absoluteMaxPrice}
-        />
-        <hr />
-        <IncludesBreakFastFilter
-            showSleepOnly={props.showSleepOnly}
-            toggleShowSleepOnly={props.toggleShowSleepOnly}
-            showIncludesBreakfast={props.showIncludesBreakfast}
-            toggleShowIncludesBreakfast={props.toggleShowIncludesBreakfast}
-        />
-        <hr />
-        <TextFilter text={props.text} setTextFilter={props.setTextFilter} />
-    </div>
-)
-
 const mapStateToProps = (state) => ({
+    isMobile: state.general.isMobile,
     validRatings: state.filters.validRatings,
     minPrice: state.filters.minPrice,
     maxPrice: state.filters.maxPrice,

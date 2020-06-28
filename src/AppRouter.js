@@ -6,21 +6,41 @@ import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import configureStore from './store/configureStore';
 import { Provider } from 'react-redux';
+import { setIsMobile } from './actions/general';
 
+const desktopBreakpoint = 800;
 const store = configureStore();
-
 let history = createBrowserHistory();
 
-const AppRouter = () => (
-    <Provider store={store}>
-        <Router history={history}>
-            <Header />
-            <Switch>
-                <Route path="/" component={AppContainer} />
-            </Switch>
-            <Footer />
-        </Router>
-    </Provider>
-);
+class AppRouter extends React.Component {
+    componentDidMount() {
+        this.checkAndUpdateIsMobile();
+        window.addEventListener('resize', this.checkAndUpdateIsMobile);
+    }
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.checkAndUpdateIsMobile);
+    }
+
+    checkAndUpdateIsMobile = () => {
+        const isMobile = window.matchMedia(`(max-width: ${desktopBreakpoint}px)`).matches;
+        store.dispatch(setIsMobile(isMobile));
+    }
+
+    render() {
+        return (
+            <Provider store={store}>
+                <Router history={history}>
+                    <Header />
+                    <Switch>
+                        <Route path="/" component={AppContainer} />
+                    </Switch>
+                    <Footer />
+                </Router>
+            </Provider>
+        )
+    }
+}
 
 export default AppRouter;
+
+
