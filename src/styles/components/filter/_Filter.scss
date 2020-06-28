@@ -10,6 +10,10 @@
     .filter-header.filter-header-main{
         padding: 1rem 1rem;
         border-bottom: 1px solid $off-white;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
     }
     .filter-header{
         color:white;
@@ -32,5 +36,18 @@
     @media only screen and (max-width: $desktop-breakpoint){
         border-top-left-radius: 0;
         border-top-right-radius: 0;
+    }
+}
+
+.filter-container-mobile{
+    @extend .filter-container;
+    .filter-header.filter-header-main{
+        @extend .clickable;
+        .filter-header-text{
+            padding-left: 0.5rem;
+        }
+    }
+    .ReactCollapse--collapse {
+        transition: height 0.5s ease-in-out;
     }
 }
