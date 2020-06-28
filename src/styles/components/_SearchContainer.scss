@@ -1,5 +1,6 @@
 .search-container{
-    padding: 1rem 0;
+    padding: 1rem 0rem;
+    margin: 0 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -13,11 +14,14 @@
         padding: 2rem 0;
         flex-direction: row;
         .sort-and-list-container{
-            width: 74%;
+            width: 72%;
         }
         .filter-container{
-            width: 24%;
+            width: 26%;
             margin: 0 0 0 0;
         }
+    }
+    @media only screen and (max-width: $desktop-breakpoint){
+        margin: 0;
     }
 }
