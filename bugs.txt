@@ -7,8 +7,5 @@ fix facebook icon
 #3
 add 2 background images
 
-#4
-fix item image responsivity issue
-
 #5
 fix dropdown icons not proper

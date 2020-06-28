@@ -36,14 +36,13 @@ export default () => {
                                     )
                                     :
                                     (
-                                        <IconContext.Provider
-                                            value={{ className: `social-media-link${((<IconComponent />).type === BsArrowUpType) ? ' goto-top' : ''}` }}
-                                            key={index}
-                                        >
-                                            <a href={href}>
+                                        <a href={href} key={index} className='social-media-link-container'>
+                                            <IconContext.Provider
+                                                value={{ className: `social-media-link`, style: { fontSize: '10px' } }}
+                                            >
                                                 <IconComponent />
-                                            </a>
-                                        </IconContext.Provider>
+                                            </IconContext.Provider>
+                                        </a>
                                     )
                             )
                         })
