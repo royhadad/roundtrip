@@ -16,7 +16,7 @@ const PriceRangeFilter = ({ minPrice, maxPrice, setMinPrice, setMaxPrice, absolu
         setMaxPrice(newMaxValue);
     }
     return (
-        <div className='price-range-container-container'>
+        <div className='price-range-container'>
             <div className='filter-header'>
                 {
                     resources.priceRangeFilterHeader

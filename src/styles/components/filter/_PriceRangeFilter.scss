@@ -1,5 +1,10 @@
-.price-range-container-container{
+.price-range-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     .absolute-price-wrapper{
+        width:100%;
         display: flex;
         flex-direction: row-reverse;
         align-items: center;

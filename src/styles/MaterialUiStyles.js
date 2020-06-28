@@ -20,7 +20,8 @@ export default theme => ({
         color: 'white'
     },
     priceRangeSlider: {
-        color: 'white'
+        color: 'white',
+        width: '95%'
     },
     priceRangeValueLabel: {
         color: '#5A5E9D',
