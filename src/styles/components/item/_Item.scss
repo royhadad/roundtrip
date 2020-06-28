@@ -24,4 +24,13 @@
         width: 18%;
         background: $very-light-blue;
     }
+
+    @media only screen and (max-width: $desktop-breakpoint){
+        .item-right{
+            width: 25%;
+        }
+        .item-middle{
+            width: 54%;
+        }
+    }
 }

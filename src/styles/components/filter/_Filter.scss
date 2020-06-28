@@ -28,4 +28,9 @@
             border-top: none;
         }
     }
+
+    @media only screen and (max-width: $desktop-breakpoint){
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
 }
