@@ -9,6 +9,7 @@
     transition: background-color 0.2s ease-in;
 }
 
+.header-item-selected,
 .header-item:hover{
     background: $off-white;
     color: $dark-blue;

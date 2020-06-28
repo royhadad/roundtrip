@@ -1,9 +1,10 @@
 import React from 'react';
-import { Select, MenuItem, InputLabel } from '@material-ui/core';
+import { Select, MenuItem, InputLabel, withStyles } from '@material-ui/core';
+import styles from '../../styles/MaterialUiStyles';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import resources from '../../resources/components/sort.json';
 
-export default ({ sortOptions, selectedSortObject, setSortObject }) => {
+const SortDropDown = ({ sortOptions, selectedSortObject, setSortObject, classes }) => {
     const selectedSortObjectIndex = sortOptions.reduce((selectObjectIndex, sortOption, currentIndex) => {
         return selectedSortObject.equals(sortOption.sortObject) ? currentIndex : selectObjectIndex;
     }, -1);
@@ -16,6 +17,7 @@ export default ({ sortOptions, selectedSortObject, setSortObject }) => {
                 value={selectedSortObjectIndex}
                 className='sort-dropdown'
                 IconComponent={ExpandMoreIcon}
+                classes={{ root: classes.dropDown }}
                 MenuProps={{
                     anchorOrigin: {
                         vertical: "bottom",
@@ -42,3 +44,5 @@ export default ({ sortOptions, selectedSortObject, setSortObject }) => {
         </div>
     )
 }
+
+export default withStyles(styles)(SortDropDown);

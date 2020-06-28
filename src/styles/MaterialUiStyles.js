@@ -35,5 +35,6 @@ export default theme => ({
     textFilterInput: {
         color: '#666666',
         fontSize: '0.8rem'
-    }
+    },
+    dropDown: {}
 });

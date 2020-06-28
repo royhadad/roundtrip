@@ -1,5 +1,0 @@
-#1
-fix router, Links and header highlight
-
-#5
-fix dropdown icons not proper
