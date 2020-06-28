@@ -6,7 +6,7 @@ export default async () => {
     const hotelNames = ['Awesome Plaza Hotel', 'Royal Beach Hotel', 'Dan Panorama'];
     const allItems = [4, 3, 2, 1, 5, 2, 5].map((rating, index) => (new Item(
         hotelNames[index % 3],
-        819 + 400 * index,
+        819 + 600 * index,
         rating,
         'https://i.pinimg.com/236x/a8/61/d0/a861d089be59851c9e1db743b10621a8.jpg',
         new moment().add(index, 'days').add(index, 'hours').add(index, 'minutes'),

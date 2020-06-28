@@ -22,11 +22,11 @@ const PriceRangeFilter = ({ minPrice, maxPrice, setMinPrice, setMaxPrice, absolu
                     resources.priceRangeFilterHeader
                 }
             </div>
-            <div className='absolute-price-wrapper'>
-                <div className='absolute-min-price'>
+            <div className='selected-price-range-wrapper'>
+                <div className='selected-min-price'>
                     {formatPrice(minPrice)}
                 </div>
-                <div className='absolute-max-price'>
+                <div className='selected-max-price'>
                     {formatPrice(maxPrice)}
                 </div>
             </div>

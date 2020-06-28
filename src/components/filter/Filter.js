@@ -11,7 +11,7 @@ import { Collapse } from 'react-collapse';
 import resources from '../../resources/components/filter.json';
 
 const absoluteMinPrice = 819;
-const absoluteMaxPrice = 4000;
+const absoluteMaxPrice = 6000;
 
 class Filter extends React.Component {
     state = {

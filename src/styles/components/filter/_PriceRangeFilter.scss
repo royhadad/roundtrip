@@ -3,14 +3,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    .absolute-price-wrapper{
+    .selected-price-range-wrapper{
         width:100%;
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
         justify-content: space-between;
-        >.absolute-min-price,
-        >.absolute-max-price{
+        >.selected-min-price,
+        >.selected-max-price{
             color: white;
             letter-spacing: 0.05rem; 
         }

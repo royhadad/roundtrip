@@ -16,4 +16,4 @@ app.get('/*', function (req, res) {
     res.sendFile(path.join(buildPath, 'index.html'));
 });
 
-app.listen(port, () => console.log(chalk.green(`server is up on port ${port}...`)));
+app.listen(port, () => console.log(chalk.green(`Server is up on port ${port}...`)));
