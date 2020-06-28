@@ -15,27 +15,11 @@ const absoluteMaxPrice = 4000;
 
 class Filter extends React.Component {
     state = {
-        isOpened: false,
-        isMobile: false
+        isOpened: false
     }
-    componentDidMount() {
-        this.checkAndUpdateIsMobile();
-        window.addEventListener('resize', this.checkAndUpdateIsMobile);
-    }
-    componentWillUnmount() {
-        window.removeEventListener('resize', this.checkAndUpdateIsMobile);
-    }
-
     toggleCollapse = () => {
         this.setState((prevState) => ({ isOpened: !prevState.isOpened }));
     }
-    checkAndUpdateIsMobile = () => {
-        const isMobile = window.matchMedia('(max-width: 800px)').matches;
-        if (isMobile !== this.props.isMobile) {
-            this.setState(() => ({ isMobile }));
-        }
-    }
-
     renderInnerFilterContainerJSX = () => (
         <div className='filters-container-inner'>
             <RatingFilter

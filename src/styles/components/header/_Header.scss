@@ -1,10 +1,30 @@
 .header-container{
-    //TODO change to blue background image
     background-image:url('https://i.ibb.co/HhW6T3p/dark-Blue-Fog.jpg');
-    padding: 0rem 1rem 0rem 1rem;
+    background-repeat: no-repeat;
+    background-size: 200%;
+
+    padding: 0rem 1rem;
     @extend .flex-center;
     flex-direction: column;
-  
+
+    @media only screen and (max-width: $desktop-breakpoint){
+        padding: 0;
+
+        .header-inner-container{
+            flex-direction: column;
+        }
+    }
+
+    .ReactCollapse--collapse {
+        transition: height 0.5s ease-in-out;
+        width: 100%;
+
+        .header-item{
+            padding: 0.5rem 0.5rem;
+            margin: 0.2rem 0;
+        }
+
+    }  
     .header-inner-container{
         width: 100%;
         height: 100%;
@@ -38,58 +58,31 @@
         }
     }
 
-
     .header-mobile-dropdown{
         width: 100%;
-        max-width: $max-main-area-width;
-        
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-evenly;
         display: flex;
-
-        transition: height 0.5s ease-in-out, opacity 0.25s 0.25s ease-in;
-        height:0;
-        opacity: 0;
-        z-index: -1;
-    }
-    @media only screen and (max-width: $desktop-breakpoint){
-        .header-mobile-dropdown-open{
-            height:10rem;
-            opacity: 1;
-            z-index: 5;
-        }
-    }
-}
-
-.mobile-menu-button{
-    height: 100%;
-    color:white;
-    @extend .flex-center;
-    @extend .clickable;
-    text-align: center;
-    vertical-align: middle;
-    >i{
-        @extend .flex-center;
-        font-size: 3rem;
-        height: 100px;
-        color:white;
         padding: 0 1rem;
-    }
-    display: none;
-}
 
-@media only screen and (max-width: $desktop-breakpoint){
-    .header-container{
-        padding: 0rem 0rem 0rem 1rem;
+        //background: yellow;
     }
-    .header-right-side{
-        display: none;
-        *{
-            display: none;
-        }
-    }
+
     .mobile-menu-button{
-        display: block;
+        height: 100%;
+        color:white;
+        @extend .flex-center;
+        @extend .clickable;
+        text-align: center;
+        vertical-align: middle;
+        >i{
+            @extend .flex-center;
+            font-size: 3rem;
+            height: 100px;
+            color:white;
+            padding: 0 1rem;
+            //background: red;
+        }
     }
 }
