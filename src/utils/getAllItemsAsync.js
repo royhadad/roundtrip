@@ -1,7 +1,7 @@
 import Item from '../entities/Item';
 import moment from 'moment';
 
-//simulates a server request to get the items
+// simulates a server request to get the items
 export default async () => {
     const hotelNames = ['Awesome Plaza Hotel', 'Royal Beach Hotel', 'Dan Panorama'];
     const allItems = [4, 3, 2, 1, 5, 2, 5].map((rating, index) => (new Item(

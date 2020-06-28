@@ -5,7 +5,7 @@ import { withStyles } from '@material-ui/core/styles';
 import { Radio } from '@material-ui/core';
 import formatPrice from '../../utils/formatPrice';
 
-//helper component
+// helper component
 const RadioItem = ({ text, price, checked, onClick, classes }) => (
     <div className='includes-breakfast-filter-item' onClick={onClick}>
         <Radio
@@ -21,7 +21,7 @@ const RadioItem = ({ text, price, checked, onClick, classes }) => (
     </div>
 )
 
-//main component
+// main component
 const IncludesBreakfastFilter = ({ showSleepOnly, toggleShowSleepOnly, showIncludesBreakfast, toggleShowIncludesBreakfast, classes }) => {
     return (
         <div className='includes-breakfast-filter-container'>

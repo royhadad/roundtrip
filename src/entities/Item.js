@@ -27,7 +27,7 @@ class Item {
         return this.toTime.diff(this.fromTime, 'days');
     }
     static getTextFromNumber(number) {
-        //returns the hebrew word in male form of the number, up to 9, above 9 returns the number
+        // returns the hebrew word in male form of the number, up to 9, above 9 returns the number
         return numbersInHebrew[number] || number;
     }
     getNumberOfNightsText() {
